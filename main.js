@@ -103,7 +103,11 @@ if it is not rush hour, the function should return
 let timeOfDay = 500;
 
 function navigateRushHour( timeOfDay ){
-    // YOUR CODE HERE
+    if ((timeOfDay >= 600 && timeOfDay <= 900) || (timeOfDay >= 1600 && timeOfDay <= 1800 )) {
+      return "The time of day is " + timeOfDay + ", I'm going around the city.";
+    }else {
+      return "The time of day is " + timeOfDay + ", I'm going through the city.";
+    }
 }
 
 
@@ -138,7 +142,11 @@ e.g. factorial( 6 ) should return the number 720
 var num = 6;
 
 let factorial = function( num ){
-    // YOUR CODE HERE
+    let factorial = num;
+    for (var i = i; i < num; i++) {
+      factorial *= i
+    }
+    return factorial;
 };
 
 
@@ -190,5 +198,10 @@ return the array [ 1, 1.25, 1.5, 1.75, 2 ]
 ***********************/
 
 let interpolate = function( start, end, count ){
-    // YOUR CODE HERE
+  let value = [];
+    let interval = (end - start) / count;
+    for (var i = start; i <= end; i+= interval) {
+      value.push(i)
+    }
+    return value;
 }
