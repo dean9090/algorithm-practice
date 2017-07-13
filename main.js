@@ -39,11 +39,22 @@ ANSWER: This function should return:
 ***********************/
 
 let singles = [ "a", "b", "c", "d" ];
+let empty = [];
 
 function arrayCombos(){
-    // YOUR CODE HERE
-}
 
+  for (var i = 0; i < singles.length; i++) {
+    let first = singles[i];
+
+    for (var j = 0; j < singles.length; j++) {
+      let second = singles[j];
+      let combo = [first , second];
+      empty.push(combo);
+    }
+  }
+
+ return empty;
+}
 
 /*** 2 ***/
 /*******************
